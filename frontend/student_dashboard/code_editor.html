@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Code Compiler</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { width: 80%; margin: auto; }
+        #editor { width: 100%; height: 300px; border: 1px solid #ddd; }
+        #output { width: 100%; height: 100px; background: #f4f4f4; padding: 10px; border: 1px solid #ddd; overflow: auto; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Online Code Compiler</h2>
+        <select id="language">
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="c">C</option>
+            <option value="cpp">C++</option>
+        </select>
+        <div id="editor"></div>
+        <button onclick="runCode()">Run</button>
+        <button onclick="submitCode()">Submit</button>
+        <h3>Output</h3>
+        <pre id="output"></pre>
+    </div>
+
+    <script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/monokai");
+        editor.session.setMode("ace/mode/python");
+
+        document.getElementById("language").addEventListener("change", function() {
+            var language = this.value;
+            var mode = "ace/mode/" + (language === "cpp" ? "c_cpp" : language);
+            editor.session.setMode(mode);
+        });
+
+        function runCode() {
+            var code = editor.getValue();
+            var language = document.getElementById("language").value;
+
+            fetch("run_code.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ code: code, language: language })
+            })
+            .then(response => response.json())
+            .then(data => document.getElementById("output").innerText = data.output)
+            .catch(error => console.error("Error:", error));
+        }
+
+        function submitCode() {
+            var code = editor.getValue();
+            var language = document.getElementById("language").value;
+
+            fetch("submit_code.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ code: code, language: language })
+            })
+            .then(response => response.json())
+            .then(data => document.getElementById("output").innerText = data.message)
+            .catch(error => console.error("Error:", error));
+        }
+    </script>
+</body>
+</html>

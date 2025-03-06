@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="profile.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <h2>Student Dashboard</h2>
+            <ul>
+                <li><a href="index.html">Back to Dashboard</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <h1>Student Profile</h1>
+            <form id="profile-form">
+                <label>Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label>Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label>Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label>Department:</label>
+                <input type="text" id="department" name="department" required>
+
+                <label>Year of Education:</label>
+                <input type="text" id="year_of_education" name="year_of_education" required>
+
+                <label>Mobile Number:</label>
+                <input type="text" id="mobile" name="mobile" required>
+
+                <button type="submit">Update Profile</button>
+            </form>
+            <p id="status-message"></p>
+        </main>
+    </div>
+</body>
+</html>
