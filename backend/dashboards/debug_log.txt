@@ -1,0 +1,18 @@
+POST Data: {"title":"Linked LIst","subject":"DSA"}
+FILES Data: {"note_file":{"name":"2-Linked_List_Deletion.pdf","full_path":"2-Linked_List_Deletion.pdf","type":"application\/pdf","tmp_name":"D:\\xampp\\tmp\\php5B10.tmp","error":0,"size":792481}}
+File moved successfully to: ../../uploads/notes/2-Linked_List_Deletion.pdf
+POST Data: {"title":"DSA manual","subject":"DSA"}
+FILES Data: {"note_file":{"name":"2024-25 DSA Lab Manual - Experiments no 1 to 6.docx.pdf","full_path":"2024-25 DSA Lab Manual - Experiments no 1 to 6.docx.pdf","type":"application\/pdf","tmp_name":"D:\\xampp\\tmp\\php9BB7.tmp","error":0,"size":1037361}}
+File moved successfully to: ../../uploads/notes/2024-25 DSA Lab Manual - Experiments no 1 to 6.docx.pdf
+POST Data: {"title":"JAVA UNIT 1","subject":"Java"}
+FILES Data: {"note_file":{"name":"exp2.pdf","full_path":"exp2.pdf","type":"application\/pdf","tmp_name":"D:\\xampp\\tmp\\phpBB22.tmp","error":0,"size":209494}}
+File moved successfully to: ../../uploads/notes/exp2.pdf
+POST Data: {"title":"JAVA exp2","subject":"Java"}
+FILES Data: {"note_file":{"name":"exp2.pdf","full_path":"exp2.pdf","type":"application\/pdf","tmp_name":"D:\\xampp\\tmp\\phpD49B.tmp","error":0,"size":209494}}
+File moved successfully to: ../../uploads/notes/exp2.pdf
+POST Data: {"title":"DSA Manual","subject":"DSA"}
+FILES Data: {"note_file":{"name":"2024-25 DSA Lab Manual - Experiments no 1 to 6.docx.pdf","full_path":"2024-25 DSA Lab Manual - Experiments no 1 to 6.docx.pdf","type":"application\/pdf","tmp_name":"D:\\xampp\\tmp\\php583A.tmp","error":0,"size":1037361}}
+File moved successfully to: ../../uploads/notes/2024-25 DSA Lab Manual - Experiments no 1 to 6.docx.pdf
+POST Data: {"title":"exp","subject":"DSA"}
+FILES Data: {"note_file":{"name":"2-Linked_List_Deletion.pdf","full_path":"2-Linked_List_Deletion.pdf","type":"application\/pdf","tmp_name":"D:\\xampp\\tmp\\phpEFAB.tmp","error":0,"size":792481}}
+File moved successfully to: ../../uploads/notes/2-Linked_List_Deletion.pdf

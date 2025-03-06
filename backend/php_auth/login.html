@@ -1,0 +1,9 @@
+<form action="login.php" method="post">
+    <input type="email" name="email" placeholder="Enter Email" required>
+    <input type="password" name="password" placeholder="Enter Password" required>
+    <button type="submit">Login</button>
+</form>
+
+<?php if ($error): ?>
+    <p style="color: red;"><?php echo $error; ?></p>
+<?php endif; ?>

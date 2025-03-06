@@ -1,0 +1,43 @@
+<form action="register.php" method="post">
+    <input type="text" name="name" placeholder="Enter Name" required>
+    <input type="email" name="email" placeholder="Enter Email" required>
+    <input type="password" name="password" placeholder="Enter Password" required>
+
+    <select name="role" id="role" onchange="toggleStudentFields()" required>
+        <option value="student" selected>Student</option>
+        <option value="mentor">Mentor</option>
+        <option value="admin">Admin</option>
+    </select>
+
+    <!-- Student-specific fields (Visible by Default) -->
+    <div id="studentFields">
+        <select name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        
+        <input type="date" name="dob" placeholder="Date of Birth">
+        <input type="text" name="department" placeholder="Department">
+        <input type="text" name="year_of_education" placeholder="Year of Education">
+        <input type="text" name="mobile" placeholder="Mobile Number">
+    </div>
+
+    <button type="submit">Register</button>
+</form>
+
+<script>
+function toggleStudentFields() {
+    let role = document.getElementById("role").value;
+    let studentFields = document.getElementById("studentFields");
+
+    if (role === "student") {
+        studentFields.style.display = "block"; // Show fields for Student
+    } else {
+        studentFields.style.display = "none"; // Hide fields for Mentor/Admin
+    }
+}
+
+// Ensure fields are visible by default when the page loads
+window.onload = toggleStudentFields;
+</script>
